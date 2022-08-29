@@ -21,7 +21,7 @@ RUN curl -L https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3
 ENV MVN $SRC/maven/apache-maven-3.8.6/bin/mvn
 
 COPY . commons-codec
-RUN rm -rf commons-codec/mayhem
+RUN rm -rf commons-codec/mayhem commons-codec/.github
 
 COPY mayhem/build.sh $SRC/
 COPY mayhem/*Fuzzer.java $SRC/
